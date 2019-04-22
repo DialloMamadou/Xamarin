@@ -2145,11 +2145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\fourplaces.iOS.csproj",
+      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\fourplaces.iOS.csproj",
       "projectName": "fourplaces.iOS",
-      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\fourplaces.iOS.csproj",
+      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\fourplaces.iOS.csproj",
       "packagesPath": "C:\\Users\\MCDIALLO\\.nuget\\packages\\",
-      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\obj\\",
+      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2167,8 +2167,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj": {
-              "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj"
+            "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj": {
+              "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj"
             }
           }
         }

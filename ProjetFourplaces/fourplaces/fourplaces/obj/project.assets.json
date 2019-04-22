@@ -1046,11 +1046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj",
+      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj",
       "projectName": "fourplaces",
-      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj",
+      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj",
       "packagesPath": "C:\\Users\\MCDIALLO\\.nuget\\packages\\",
-      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\obj\\",
+      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

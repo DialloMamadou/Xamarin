@@ -1741,11 +1741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\fourplaces.Android.csproj",
+      "projectUniqueName": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\fourplaces.Android.csproj",
       "projectName": "fourplaces.Android",
-      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\fourplaces.Android.csproj",
+      "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\fourplaces.Android.csproj",
       "packagesPath": "C:\\Users\\MCDIALLO\\.nuget\\packages\\",
-      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\obj\\",
+      "outputPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1763,8 +1763,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj": {
-              "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Fourplaces-Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj"
+            "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj": {
+              "projectPath": "E:\\M1Informatique\\S2\\DMP\\Xamarin\\Xamarin\\ProjetFourplaces\\fourplaces\\fourplaces\\fourplaces.csproj"
             }
           }
         }
