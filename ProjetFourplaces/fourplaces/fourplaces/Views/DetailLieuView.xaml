@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" 
+            x:Class="fourplaces.Views.DetailLieuView" 
+            xmlns:models="clr-namespace:fourplaces.Models"
+            Title="Details du Lieu">
+
+    <ContentPage Title="Description">
+        <ScrollView>
+            <StackLayout>
+
+                <custom:CircleImage Grid.Row="5" Margin="10,0" x:Name="imageView" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" 
+                                    Aspect="AspectFill" VerticalOptions="Start"
+                                   HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="{Binding Title}"  
+                   FontSize="24"
+                   TextColor="Black" TextDecorations="Underline"
+
+                   HorizontalOptions="CenterAndExpand" 
+                   Margin="0,30"/>
+
+                <Label Text="{Binding Description}"
+                   Margin="10,0" 
+                   FontSize="20" 
+                   TextColor="Black"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Carte">
+        <ContentView Content="{Binding Map}"
+                         Margin="10,0"/>
+    </ContentPage>
+    <ContentPage Title="Commentaires">
+        <StackLayout>
+            <Frame CornerRadius="5"   
+                   Padding="0"
+                   Margin="10,0">
+                <StackLayout BackgroundColor="White"
+                         Margin="10,0">
+
+                    <Editor Text="{Binding Commentaire}"
+                        Placeholder="Ajouter un commentaire"
+                        Margin="10,0"
+                        HeightRequest="100"/>
+                    <Button CornerRadius="5" Text="Commenter"
+                    Command="{Binding BoutonCommenter}"
+                    Margin="10,0"/>
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="ListeComments" HasUnevenRows="True" SelectionMode="None" ItemsSource="{Binding Commentaires}" Margin="10,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:CommentItem">
+                        <ViewCell>
+                            <Frame CornerRadius="4"
+                               HasShadow="True"
+                               Margin="4,4,4,4"
+                               Padding="8,4,8,4"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Start"
+                               >
+                                <StackLayout HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="Start"
+                                         Orientation="Horizontal">
+
+                                    <StackLayout Orientation="Vertical"
+                                             Grid.Column="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="Center"
+                                             >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Author.FirstName}" 
+                                           TextColor="Black" 
+                                           LineBreakMode="WordWrap" 
+                                           FontSize="16"
+                                           />
+                                            <Label Text="{Binding Author.LastName}" 
+                                           TextColor="Black" 
+                                           LineBreakMode="WordWrap" 
+                                           FontSize="16"
+                                           />
+                                        </StackLayout>
+                                        <Label Text="{Binding Text}" 
+                                           TextColor="Black" 
+                                           LineBreakMode="WordWrap" 
+                                           FontSize="20"
+                                           />
+                                        <Label Text="{Binding Date}" 
+                                           TextColor="Black" 
+                                           LineBreakMode="WordWrap" 
+                                           FontSize="16"
+                                           />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

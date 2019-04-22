@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseContentPage xmlns:mvvm="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms" 
+                      xmlns="http://xamarin.com/schemas/2014/forms"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      x:Class="fourplaces.Views.EditUtilisateurView"
+                      xmlns:vm="clr-namespace:fourplaces.ViewModels"
+                      xmlns:models="clr-namespace:fourplaces.Models"
+                      xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                      x:DataType="vm:EditUtilisateurViewModel"
+                      Title="Modification profil ">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ajouterImage.png" Command="{Binding BoutonChargerImage}"/>
+        <ToolbarItem Icon="ajouterPhoto.png" Command="{Binding BoutonPrendrePhoto}"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <StackLayout>
+
+                <custom:CircleImage Grid.Row="5" Margin="10,0" x:Name="imageView" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" 
+                                    Aspect="AspectFill" VerticalOptions="Start"
+                                   HorizontalOptions="CenterAndExpand" />
+                <Label Text="Votre Prénom"
+                FontSize="20"
+                Margin="10,0"/>
+                <Entry Text="{Binding FirstName}"
+                Placeholder="Prénom"
+                Margin="10,0"/>
+
+                <Label Text="Votre Nom"
+                FontSize="20"
+                Margin="10,0"/>
+                <Entry Text="{Binding LastName}"
+                Placeholder="Nom"
+                Margin="10,0"/>
+
+            </StackLayout>
+
+
+            <RelativeLayout HeightRequest="120">
+                <ListView HasUnevenRows="True"
+                SeparatorVisibility="None"
+                Rotation="270"
+                RowHeight="120"
+                ItemsSource="{Binding Images}"
+                SelectedItem="{Binding SelectedImage, Mode=TwoWay}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=60}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=120}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:ImageItem">
+                            <ViewCell>
+                                <ContentView Rotation="90">
+                                    <Image Source="{Binding Url}" Margin="0,0,0,10" WidthRequest="120" HeightRequest="120" Aspect="AspectFit"/>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RelativeLayout>
+
+            <Label Text="{Binding MsgErreur}"
+                FontSize="20"
+                TextColor="Red"
+                Margin="10,0"/>
+
+
+            <Button Text="Enregistrer modification"
+                Command="{Binding BoutonEnregister}"
+                Margin="10,0"/>
+        </StackLayout>
+    </ScrollView>
+
+
+</mvvm:BaseContentPage>

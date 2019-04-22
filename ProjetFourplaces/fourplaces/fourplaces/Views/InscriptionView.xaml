@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseContentPage xmlns:mvvm="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms" 
+                      xmlns="http://xamarin.com/schemas/2014/forms"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      Title="Inscription"
+                      x:Class="fourplaces.Views.InscriptionView"
+                      xmlns:vm="clr-namespace:fourplaces.ViewModels"
+                      x:DataType="vm:InscriptionViewModel"
+                      >
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+
+            <Label Text="Votre Prénom"
+                FontSize="20"
+                Margin="10,0"/>
+            <Entry Text="{Binding FirstName}"
+                Placeholder="Prénom"
+                Margin="10,0"/>
+
+            <Label Text="Votre Nom"
+                FontSize="20"
+                Margin="10,0"/>
+            <Entry Text="{Binding LastName}"
+                Placeholder="Nom"
+                Margin="10,0"/>
+
+            <Label Text="Votre Email"
+               FontSize="20"
+               Margin="10,0"/>
+            <Entry Text="{Binding Email}"
+                Placeholder="Email"
+                Margin="10,0"/>
+
+            <Label Text="Votre mot de passe"
+                FontSize="20"
+                Margin="10,0"/>
+            <Entry Text="{Binding Password}"
+                Placeholder="mot de passe"
+                IsPassword="True"
+                Margin="10,0"/>
+
+            <Label Text="Confirmer votre mot de passe"
+                FontSize="20"
+                Margin="10,0"/>
+            <Entry Text="{Binding Password2}"
+                Placeholder="Confirmer mot de passe"
+                IsPassword="True"
+                Margin="10,0"/>
+
+            <Label Text="{Binding MsgErreur}"
+               FontSize="20"
+               TextColor="Red"
+               Margin="10,0"/>
+
+            <Button Text="S'enregistrer"
+                Command="{Binding BoutonInscription}"
+                Margin="10,0"/>
+        </StackLayout>
+    </ScrollView>
+</mvvm:BaseContentPage>

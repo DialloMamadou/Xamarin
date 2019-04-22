@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseContentPage xmlns:mvvm="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms" 
+                      xmlns="http://xamarin.com/schemas/2014/forms"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:vm="clr-namespace:fourplaces.ViewModels"
+                      xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                      x:Class="fourplaces.Views.UtilisateurView"
+                      Title="Profil Utilisateur"
+                      x:DataType="vm:UtilisateurViewModel"
+                      >
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+
+
+
+            <custom:CircleImage Grid.Row="5" Margin="10,0" x:Name="imageView" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" 
+                                    Aspect="AspectFill" VerticalOptions="Start"
+                                   HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout>
+
+                <Label Text="{Binding FirstName}"
+                   FontSize="20"
+                   Margin="10,0"/>
+
+                <Label Text="{Binding LastName}"
+                   FontSize="20"
+                   Margin="10,0"/>
+
+                <Label Text="{Binding Email}"
+                   FontSize="20"
+                   Margin="10,0"/>
+            </StackLayout>
+
+            <Label Text="{Binding MsgErreur}"
+               FontSize="20"
+               TextColor="Red"
+               Margin="10,0"/>
+
+            <Button Text="Modifier profil"
+                Command="{Binding BoutonEditUtil}"
+                Margin="10,0"/>
+
+            <Button Text="Changer mot de passe"
+                Command="{Binding BoutonEditMdp}"
+                Margin="10,0"/>
+        </StackLayout>
+    </ScrollView>
+</mvvm:BaseContentPage>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseContentPage xmlns:mvvm="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
+                      xmlns="http://xamarin.com/schemas/2014/forms"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      x:Class="fourplaces.Views.AjoutLieuView"
+                      xmlns:vm="clr-namespace:fourplaces.ViewModels"
+                      xmlns:models="clr-namespace:fourplaces.Models"
+                      xmlns:syncfusion="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+                      xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                      x:DataType="vm:AjoutLieuViewModel"
+                      Title="Ajout d'un lieu" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ajouterImage.png" Command="{Binding BoutonChargerImage}"/>
+        <ToolbarItem Icon="ajouterPhoto.png" Command="{Binding BoutonPrendrePhoto}"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+
+            <Label Text="Nom du lieu"
+               FontSize="20"
+               Margin="10,0"/>
+            <Entry Text="{Binding Title}"
+               Placeholder="nom"
+               Margin="10,0"/>
+
+            <Label Text="Description"
+               FontSize="20"
+               Margin="10,0"/>
+            <Editor Text="{Binding Description}"
+                Placeholder="Description"
+                Margin="10,0"
+                HeightRequest="100"/>
+
+            <custom:CircleImage Grid.Row="5" x:Name="imageView" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" 
+                                    Aspect="AspectFill" VerticalOptions="Start"
+                                   HorizontalOptions="CenterAndExpand" />
+
+
+            <RelativeLayout HeightRequest="120">
+                <ListView HasUnevenRows="True"
+                SeparatorVisibility="None"
+                Rotation="270"
+                RowHeight="120"
+                ItemsSource="{Binding Images}"
+                SelectedItem="{Binding SelectedImage, Mode=TwoWay}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=60}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=120}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:ImageItem">
+                            <ViewCell>
+                                <ContentView Rotation="90">
+                                    <custom:CircleImage Grid.Row="5" x:Name="imageView" Margin="0,0,0,10" Source="{Binding Url}" WidthRequest="120" HeightRequest="120" 
+                                    Aspect="AspectFill" VerticalOptions="Start"
+                                   HorizontalOptions="CenterAndExpand" />
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RelativeLayout>
+
+
+            <Label Text="Localisation"
+                   HorizontalTextAlignment="Center"
+                FontSize="20"
+                Margin="10,0"/>
+            <ContentView Content="{Binding Map}"
+                HeightRequest="400"
+                Margin="10,0"/>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label Text="Latitude"
+                        FontSize="20"
+                        Margin="5,0"/>
+                    <syncfusion:SfNumericUpDown 
+                        x:Name="Latitude"
+                        Value="{Binding Longitude}"  
+                        Maximum="90"
+                        Minimum="-90"
+                        AutoReverse="True"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label Text="Longitude"
+                       FontSize="20"
+                       Margin="5,0"/>
+
+                    <syncfusion:SfNumericUpDown 
+                        x:Name="Longitude"
+                        Value="{Binding Longitude}" 
+                        Maximum="180"
+                        Minimum="-180"
+                        AutoReverse="True"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="{Binding MsgErreur}"
+               FontSize="20"
+               TextColor="Red"
+               Margin="10,0"/>
+
+            <Button Text="Ajouter le lieu"
+                Command="{Binding BoutonAjouterLieu}"
+                Margin="10,0"/>
+        </StackLayout>
+    </ScrollView>
+</mvvm:BaseContentPage>
