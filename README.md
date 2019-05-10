@@ -3,7 +3,10 @@ Fourplaces-Xamarin:
 Une application avec les fonctionnalités:
 
 Un écran d’inscription
+
 Un écran de connexion
+
+
 Un écran permettant de visualiser son profil
 Un écran permettant d’éditer son profil
 Un écran permettant d’éditer son mot de passe
