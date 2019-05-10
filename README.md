@@ -1,14 +1,13 @@
-Fourplaces-Xamarin
-:
+Fourplaces-Xamarin:
 
-Une application avec les fonctionnalités:
+Une application avec les fonctionnalitÃ©s:
 
-Un écran d’inscription
-Un écran de connexion
-Un écran permettant de visualiser son profil
-Un écran permettant d’éditer son profil
-Un écran permettant d’éditer son mot de passe
-Un écran affichant la liste des lieux avec leur image associées
-Un écran de détail d’un lieu permettant de le situer sur une map (google maps ou apple plan) ainsi que de voir la liste des commentaires associées. On doit aussi permettre l’ajout de commentaire en saisissant son nom et le texte. Il faudra bien évidemment que la liste des commentaires fasse apparaître notre nouveau commentaire une fois qu’il sera publié.
-Un écran permettant d’ajouter un lieu avec un nom, une description, une image et la position GPS dans la liste avec choix de l’image depuis la galerie ou directement par prise de photo avec le téléphone. La position GPS du lieu pourra soit être saisie soit utiliser la localisation actuelle de l’utilisateur.
+Un Ã©cran dâ€™inscription
+Un Ã©cran de connexion
+Un Ã©cran permettant de visualiser son profil
+Un Ã©cran permettant dâ€™Ã©diter son profil
+Un Ã©cran permettant dâ€™Ã©diter son mot de passe
+Un Ã©cran affichant la liste des lieux avec leur image associÃ©es
+Un Ã©cran de dÃ©tail dâ€™un lieu permettant de le situer sur une map (google maps ou apple plan) ainsi que de voir la liste des commentaires associÃ©es. On doit aussi permettre lâ€™ajout de commentaire en saisissant son nom et le texte. Il faudra bien Ã©videmment que la liste des commentaires fasse apparaÃ®tre notre nouveau commentaire une fois quâ€™il sera publiÃ©.
+Un Ã©cran permettant dâ€™ajouter un lieu avec un nom, une description, une image et la position GPS dans la liste avec choix de lâ€™image depuis la galerie ou directement par prise de photo avec le tÃ©lÃ©phone. La position GPS du lieu pourra soit Ãªtre saisie soit utiliser la localisation actuelle de lâ€™utilisateur.
 Afin de sauvegarder tous les lieux et commentaires,on utilise les services fournis par une API dont la documentation swagger est disponible ici : https://td-api.julienmialon.com/swagger/
